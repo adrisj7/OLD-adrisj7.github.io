@@ -17,18 +17,77 @@
 
 <html>
   <head>
+    <meta charset="utf-8"/>
+    <!-- I know you're all probably sick of using bootstrap, but like I said, front end is not my slice of cake (and bootstrap is nice mkay) -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js" integrity="sha384-a5N7Y/aK3qNeh15eJKGWxsqtnX/wWdSZSKp+81YjTmS15nvnvxKHuzaWwXHDli+4" crossorigin="anonymous"></script>
+
     <title> Adris Jautakas </title>
   </head>
 
   <body>
-    <h1> Hey! I'm Adris Jautakas </h1>
-    <br>
-    <br>
-    I like to make stuff.
-    <br>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark ">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"> Adris Jautakas </a>
+        </div>
+        <p class="navbar-text navbar-right" id="navbar_text_random"> (Hi there! This navbar broke :( )</p>
+      </div>
+    </nav>
+
+    <div class="jumbotron text-center" >
+      <h1> Hey! I'm Adris Jautakas </h1>
+      <br>
+      <br>
+      I like to make stuff.
+      <br>
+      Here's a sampler:
+      <br><br>
+      <!--<div class="btn-group btn-group-lg" role="group">-->
+      <!--<button type="button" class="btn btn-primary">Robotics</button>
+      <button type="button" class="btn btn-primary">Music</button>
+      <button type="button" class="btn btn-primary">Video Games</button>-->
+      <a href="#robotics-jump" class="btn btn-default btn-lg" role="button">Robotics</a>
+      <a href="#music-jump" class="btn btn-default btn-lg" role="button">Music</a>
+      <a href="#videogames-jump" class="btn btn-default btn-lg" role="button">Video Games</a>
+    </div>
+
+    <a name="robotics-jump">
+    <h2 class="text-center"> Robotics </h2>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <a name="music-jump">
+    <h2 class="text-center"> Music </h2>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+    <a name="videogames-jump">
+    <h2 class="text-center"> Video Games </h2>
+
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <!-- TODO: Flesh out the intro. "I'm Adris, a humble high school student who loves ABC, DEF and XYZ! yadayada" -->
     <!-- TODO: Use a styling library. Or don't, cause you're not a front-end guy. -->
     <!-- TODO: Make a cool lookin' menu that lets you pick from "I <3 Robotics!" to "I make Music" to "I make Vidya Games" and then some -->
     <!-- TODO: Finish these TODO's -->
+  
+
+  <script type="text/javascript">
+    // Randomize Navbar Header
+    var header_prompts = [
+        "Ahoy there!",
+        "Greetings [Prospective Employer Name Here]!",
+        "I push buttons to make computers dance for me",
+        "Welcome to a piece of my mind",
+        "...And I'm all out of bubble gum!"
+    ];
+    var picked_prompt = header_prompts[ Math.floor(Math.random() * header_prompts.length) ];
+    $("#navbar_text_random").html(picked_prompt);
+
+
+  </script>
+
   </body>
 </html>
