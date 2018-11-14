@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Categories on Experimental DevBlog</title>
+    <link>http://adrisj7.github.io/categories/</link>
+    <description>Recent content in Categories on Experimental DevBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2018 Adris Jautakas, I&#39;m no lawyer but I think that&#39;s how it works</copyright>
+    
+	<atom:link href="http://adrisj7.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Experimental DevBlog</title>
+    <link>http://adrisj7.github.io/posts/</link>
+    <description>Recent content in Posts on Experimental DevBlog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>© 2018 Adris Jautakas, I&#39;m no lawyer but I think that&#39;s how it works</copyright>
+    <lastBuildDate>Wed, 14 Nov 2018 16:15:43 -0500</lastBuildDate>
+    
+	<atom:link href="http://adrisj7.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>First Post</title>
+      <link>http://adrisj7.github.io/posts/first-post/</link>
+      <pubDate>Wed, 14 Nov 2018 16:15:43 -0500</pubDate>
+      
+      <guid>http://adrisj7.github.io/posts/first-post/</guid>
+      <description>First post I guess Uh, Hiya!</description>
+    </item>
+    
+  </channel>
+</rss>
