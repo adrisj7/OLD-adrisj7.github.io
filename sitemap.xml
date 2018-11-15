@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://adrisj7.github.io/posts/first-post/</loc>
+    <loc>http://adrisj7.github.io/post/first-post/</loc>
     <lastmod>2018-11-14T16:15:43-05:00</lastmod>
   </url>
   
@@ -19,7 +19,7 @@
   </url>
   
   <url>
-    <loc>http://adrisj7.github.io/posts/</loc>
+    <loc>http://adrisj7.github.io/post/</loc>
     <lastmod>2018-11-14T16:15:43-05:00</lastmod>
     <priority>0</priority>
   </url>
