@@ -6,10 +6,19 @@
     <description>Recent content in Posts on Experimental DevBlog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 14 Nov 2018 16:15:43 -0500</lastBuildDate>
+    <lastBuildDate>Thu, 15 Nov 2018 12:54:49 -0500</lastBuildDate>
     
 	<atom:link href="http://adrisj7.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Second Post</title>
+      <link>http://adrisj7.github.io/post/second-post/</link>
+      <pubDate>Thu, 15 Nov 2018 12:54:49 -0500</pubDate>
+      
+      <guid>http://adrisj7.github.io/post/second-post/</guid>
+      <description>&lt;p&gt;Second post time!&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>First Post</title>
