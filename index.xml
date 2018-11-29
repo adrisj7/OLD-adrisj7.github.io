@@ -1,32 +1,23 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Experimental DevBlog</title>
+    <title>Dev Blog</title>
     <link>http://adrisj7.github.io/</link>
-    <description>Recent content on Experimental DevBlog</description>
+    <description>Recent content on Dev Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 15 Nov 2018 12:54:49 -0500</lastBuildDate>
+    <lastBuildDate>Wed, 28 Nov 2018 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="http://adrisj7.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Second Post</title>
-      <link>http://adrisj7.github.io/post/second-post/</link>
-      <pubDate>Thu, 15 Nov 2018 12:54:49 -0500</pubDate>
-      
-      <guid>http://adrisj7.github.io/post/second-post/</guid>
-      <description>&lt;p&gt;Second post time!&lt;/p&gt;</description>
-    </item>
-    
-    <item>
-      <title>First Post</title>
+      <title>Post #1: Looking back at Ludum Dare 42</title>
       <link>http://adrisj7.github.io/post/first-post/</link>
-      <pubDate>Wed, 14 Nov 2018 16:15:43 -0500</pubDate>
+      <pubDate>Wed, 28 Nov 2018 00:00:00 +0000</pubDate>
       
       <guid>http://adrisj7.github.io/post/first-post/</guid>
-      <description>&lt;p&gt;This is the post summary!&lt;/p&gt;</description>
+      <description>&lt;p&gt;First post. Let&amp;rsquo;s take a look at Ludum Dare 42.&lt;/p&gt;</description>
     </item>
     
   </channel>
