@@ -19,28 +19,28 @@
     
 
     
-    <title>
-  Tag → 
+    <title>Test Post 1</title>
+
+    
+    
+
+
+
   
-   | Dev Blog
-</title>
-
-    
-    
-
-
-
-
   
   <meta name="author" content="" />
-  <meta name="description" content="" />
+  <meta name="description" content="The first test post!
+">
 
   
-  <meta name="twitter:card" content="summary" />
-  <meta name="twitter:site" content="@gohugoio" />
-  <meta name="twitter:title" content="Dev Blog" />
-  <meta name="twitter:description" content="" />
-  <meta name="twitter:image" content="http://adrisj7.github.io/img/avatar.jpg" />
+  
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:site" content="@gohugoio" />
+    <meta name="twitter:title" content="Test Post 1" />
+    <meta name="twitter:description" content="The first test post!
+" />
+    <meta name="twitter:image" content="http://adrisj7.github.io/img/avatar.jpg" />
+  
 
 
 
@@ -48,8 +48,8 @@
 <meta name="generator" content="Hugo 0.55.5">
 
 
-<link rel="canonical" href="http://adrisj7.github.io/tags/">
-<link rel="alternative" href="../index.xml" title="Dev Blog" type="application/atom+xml">
+<link rel="canonical" href="http://adrisj7.github.io/post/test-post1/">
+<link rel="alternative" href="../../index.xml" title="Dev Blog" type="application/atom+xml">
 
 
 <meta name="renderer" content="webkit" />
@@ -63,9 +63,9 @@
 
 
 
-<link rel="icon" href="../img/favicon.ico" />
+<link rel="icon" href="../../img/favicon.ico" />
 <meta name="apple-mobile-web-app-capable" content="yes">
-<link rel="apple-touch-icon" sizes="120x120" href="../img/avatar.jpg">
+<link rel="apple-touch-icon" sizes="120x120" href="../../img/avatar.jpg">
 
 
 <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400" rel="stylesheet">
@@ -129,17 +129,187 @@
 
 </header>
 
-  <section class="main entry-list">
-    <header class="list-header">
-      
-      
+
+  
+  <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.11.1/firebase-firestore.js"></script>
+
+  
+  <style>
+    .comments {
+        position: relative;
+        left: 30px;
+    }
+    .comment {
+        position: relative;
+        border-top: 1px solid #73AD21;
+        border-bottom: 1px solid #73AD21;
+        overflow: hidden;
+        background-color: #f7f7f7;
+        padding: 10px;
+    }
+    .comment-text {
+        position: relative;
+        left: 20px;
+    }
+    .richard {
+        background-color: #effdff;
+    }
+    .noah {
+        background-color: #fffce8;
+    }
+    .adris {
+        background-color: #ffefef;
+    }
+  </style>
+
+  <section class="main post-detail">
+    <header class="post-header">
+      <h1 class="post-title" id="post-title">Test Post 1</h1>
+      <p class="entry-meta"><span class="entry-time" id="post-time">May 5, 2019</span>
+       </p>
     </header>
     
-    
-      <p>There's nothing here.<br>Create an interesting post with the command:</p>
-      <p><code>$ hugo new post/hello-world.md</code></p>
-    
-    
+    <article class="post-content"><p>The first test post!</p>
+
+<h1 id="welcome">WELCOME!</h1>
+
+<p>Welcome to my 2019 summer dev blog! Hope you enjoy your stay.</p>
+
+<p>I technically tried doing something like this a while ago but kinda got
+distracted, so let&rsquo;s try this again.</p>
+
+<p>This time, I&rsquo;ve got some friends joining me in on this little endeavour.</p>
+
+<p>Make sure to test out the completely janky but functional (I think?) comment
+system down below! Use your first name for a fun color change of comments.</p></article>
+    <footer class="post-footer">
+      <h1> COMMENTS </h1>
+      <div class="comments" id="comments">
+        (None found) <br>
+      </div>
+      <h2> Post Comment </h2>
+      Name (first name only please): <br>
+      <input type="text" id="comment-name"> <br>
+      Comment: <br>
+      <textarea rows="10" cols="50" id="comment-text"> </textarea> <br>
+      <input type="button" value="post" onclick="post_comment()">
+      <br><br>
+      
+      <ul class="post-tags">
+        
+          <li class="post-tag"><a href="../../tags/test"><span class="tag">Test</span></a></li>
+        
+      </ul>
+      
+
+      
+      <script>
+        
+        
+        function get_post_key() {
+            return document.getElementById("post-title").innerHTML + ", " + document.getElementById("post-time").innerHTML;
+        }
+
+
+        
+        var firebaseConfig = {
+          
+          apiKey: "AIzaSyDytIgG1Ssat3oP_sLOcHA8u1OytqgHh5s",
+          authDomain: "devblog-summer2019.firebaseapp.com",
+          databaseURL: "https://devblog-summer2019.firebaseio.com",
+          projectId: "devblog-summer2019",
+          storageBucket: "devblog-summer2019.appspot.com",
+          messagingSenderId: "583175786849",
+          appId: "1:583175786849:web:a3d77266c3eae186"
+        };
+        
+        firebase.initializeApp(firebaseConfig);
+
+        var db = firebase.firestore();
+
+        
+        function add_comment(name, comment, timestamp) {
+            var cclass = "comment ";
+            cclass += name.toLowerCase();
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            var celement = document.getElementById("comments");
+            var text_result = "";
+            text_result += "<div class=\"" + cclass + "\">";
+            text_result +=   "<i> At " + timestamp + ":</i></br>";
+            text_result +=   "<b>" + name + ":</b><br>";
+            text_result +=   "<div class=\"comment-text\"> " + comment + "</div>";
+            text_result += "</div>"
+            text_result += "<br>";
+            celement.innerHTML += text_result;
+        }
+
+        function get_timestamp_text(fb_timestamp) {
+            
+            var d = new Date(0); 
+            d.setUTCSeconds(fb_timestamp.seconds);
+            var tspl = d.toTimeString().split(" ");
+            var time = new Date();
+            var time1 = d.toLocaleString('en-US', { hour: 'numeric', minute: 'numeric', hour12: true });
+            var dspl = d.toDateString().split(" ");
+            var timestamp = time1 + ", "
+                          + dspl[1] + " " + dspl[2] + ", " + dspl[3] + " "
+                          + "(" + tspl[1] + ")";
+            return timestamp;
+        }
+
+        
+        function post_comment() {
+            var name = document.getElementById("comment-name").value;
+            var content = document.getElementById("comment-text").value;
+
+            var timestamp = firebase.firestore.FieldValue.serverTimestamp();
+
+            
+            
+            db.collection("comments").doc( get_post_key() ).collection("comments").add({
+                name : name,
+                timestamp: timestamp,
+                content : content
+            }).then(function() {
+                add_comment(name, content, "right now!");
+                document.getElementById("comment-name").value = "";
+                document.getElementById("comment-text").value = "";
+            });
+
+        }
+
+        
+        async function update_posts() {
+            var celement = document.getElementById("comments");
+            celement.innerHTML = "";
+            var comments = db.collection("comments").doc(get_post_key()).collection("comments");
+            const snapshot = await comments.orderBy("timestamp").get();
+            var c = snapshot.docs.map(doc => doc.data());
+            c.forEach((v) => {
+              console.log(v.timestamp);
+              add_comment(v.name, v.content, get_timestamp_text(v.timestamp));
+            });
+            if (c.length == 0) {
+                celement.innerHTML = "No comments found! Bring it on!";
+            }
+        }
+
+        
+        update_posts();
+      </script>
+
+      
+      
+    </footer>
   </section>
   <footer class="footer">
   <p>Copyright © 2018-2019 Dev Blog</p>
