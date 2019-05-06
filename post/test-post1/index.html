@@ -305,6 +305,12 @@ system down below! Use your first name for a fun color change of comments.</p></
 
         
         update_posts();
+
+        
+        db.collection("comments").doc(get_post_key()).collection("comments").onSnapshot(function(doc) {
+            console.log("UPDATE!");
+            update_posts();
+        });
       </script>
 
       
